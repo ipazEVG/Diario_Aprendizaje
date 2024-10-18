@@ -1,0 +1,175 @@
+/* styles.css */
+
+/* Estilos para el body */
+html{
+    scroll-behavior:smooth; /*esto hace que sea mas fluido la página*/
+}
+body {
+    width: 1260px;
+    background-color: #bcc3a6;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+#cabecera1{
+    display: flex;  /*Activa Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente (si el header tiene altura) */
+    height: 200px; /* Ajusta la altura según sea necesario */
+    text-align: center;
+}
+/* Estilos para la navegación */
+nav {
+    margin-top: 120px; /* Espaciado entre el título y la navegación */
+}
+
+/* Estilos para el párrafo y el enlace */
+nav p {
+    margin: 0; /* Elimina márgenes por defecto */
+    text-align: center; /* Centra el texto dentro del párrafo */
+}
+
+nav a {
+    color: black; /* Color del enlace */
+    text-decoration: none; /* Elimina el subrayado */
+    padding: 8px 16px; /* Espaciado interno alrededor del enlace */
+    border: 2px solid transparent; /* Borde transparente por defecto */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: border-color 0.3s; /* Suaviza el cambio de color del borde */
+}
+
+/* Efecto al pasar el mouse sobre el enlace */
+nav a:hover {
+    border-color: black; /* Cambia el borde al pasar el mouse */
+    background-color: rgba(97, 218, 251, 0.1); /* Fondo semitransparente al pasar el mouse */
+}
+
+#titulo1 {
+    margin: 0; /* Elimina márgenes por defecto */
+    color: #4f2a11; /* Color del texto */
+}
+h1 {
+    font-family: 'roboto', serif; /* Fuente para encabezados */
+    color: #5a2731; /* Color oscuro para títulos */
+}
+h2{
+    font-family: 'roboto', serif; /* Fuente para encabezados */
+    color: #3f373a; /* Color oscuro para títulos */  
+}
+code {
+    color: black; /* Color del texto */
+    padding: 2px 4px; /* Espaciado interno */
+    font-family: 'Courier New', Courier, monospace; /* Fuente monospace */
+    font-size: 0.93em; /* Tamaño de fuente */
+}
+.resaltado
+/* Estilos del header */
+#cabecera1{
+    margin: 30px 50px 0px 400px;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex; /*Usar flexbox para alinear el sidebar y el contenido*/
+    height: 100%; /* Altura completa de la ventana */
+
+}
+
+/* Estilos para el sidebar */
+.sidebar {
+    width: 250px; /* Ajusta el ancho de la barra lateral */
+    background-color:#3f845f; /* Color de fondo */
+    padding: 10px; /* Espaciado interno */
+    border: 3px solid white;
+    border-radius: 30px;
+    text-align: left;
+}
+menu{
+    position: sticky;
+    top: 20px;
+    padding: 0px 0px 0px 10px;
+    
+
+}
+menu > li {
+    transition: background-color 0.3s;
+    background-color: #3f845f;
+}
+menu > li:hover{
+    background-color: rgba(211, 211, 211, 0.512);
+}
+h3{
+    color: #f3f3f3; 
+}
+
+.menuTemas {
+    list-style-type: none; /*Elimina el estilo de lista*/
+    margin: 15px 0px 0px 0px; /* Margen entre los temas */
+    width: 199px;
+    border-bottom: 2px solid #f3f3f3;
+    background-color: #3f845f;
+
+}
+.tema-label {
+    font-weight: bold;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color:#222322; /* Hereda el color del texto normal */
+}
+
+.tema-checkbox {
+    display: none; /* Oculta el checkbox*/
+}
+
+ .submenu { 
+    display: none; /* Oculta el submenú por defecto */
+    padding: 0px 50px 0px 20px; /* Indentación para las unidades */
+    list-style-type:decimal; /*Elimina el estilo de lista*/
+   
+}
+.submenu a { 
+    text-decoration: none; /* Quita el subrayado */
+    color: black; /* Cambia el color del texto */
+    line-height: 1.6; /* Ajusta el interlineado */
+}
+.tema-checkbox:checked + .submenu{
+    display: block; /* Muestra el submenú cuando el checkbox está marcado */
+
+}
+/* Estilos para el contenido */
+main {
+    padding: 20px; /* Espaciado interno */
+    background-color: #f7efed; /* Color de fondo del contenido */
+    border-radius: 30px;
+}
+/* colores de subrayado */
+.colorazul{
+    background-color: #bfd3e8;
+    border-radius: 4px; 
+    font-weight:bold;
+}
+.colorverde{
+    background-color: #bbe885;
+    border-radius: 4px; 
+    font-weight:bold;
+}
+.colorrosa{
+    background-color: #f28bb6;
+    border-radius: 4px; 
+    font-weight:bold;
+}
+footer{
+    background-color:#cac0b2;
+    border-radius: 6px; 
+    font-weight:bold;
+    text-align: center;
+}
+/* estilos de fielset */
+.fieldsetRecursos{
+    background-color: #f8efde;
+    border: 3px solid #3f845f;
+}
+.fieldsetproblemas{
+    background-color: #f8efde;
+    border: 3px solid #3f845f; 
+
+}

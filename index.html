@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuaderno de aprendizaje</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <!-- Encabezado -->
+    <header id="cabecera1">
+        <h1 id="titulo1">DIARIO DE APRENDIZAJE SOBRE GIT</h1>
+        <nav>
+            <p><a href="index.html"><b>TEMA 1. <u>GIT.</u></b></a></p>
+        </nav>
+        
+    </header>
+     <div class="container">
+     <!-- Barra lateral de navegación -->
+        <aside class="sidebar">
+            <menu>
+                <h3><b><u>Menú</u></b></h3>
+                <li class="menuTemas">
+                        <label for="tema1" class="tema-label">Unidad 1</label>
+                    <input type="checkbox" id="tema1" class="tema-checkbox">
+                    <ul class="submenu">
+                        <li class="submenu1"><a href="#ud1.1"> Introducción.</a></li>
+                        <li class="submenu2"><a href="#ud1.2"> Configuración Inicial de Git.</a></li>
+                        <li class="submenu3"><a href="#ud1.3"> Comandos Básicos de Git.</a></li>
+                        <li class="submenu4"><a href="#ud1.4"> Comandos para Comparar y Revisar Cambios</a></li>
+                        <li class="submenu5"><a href="#ud1.5"> Gestión de Repositorios Remotos.</a></li>
+                        <li class="submenu6"><a href="#ud1.6"> Subida de Cambios al Servidor Remoto.</a></li>
+                        <li class="submenu7"><a href="#ud1.7"> Rollback (Reversión de Cambios).</a></li>
+                        <li class="submenu8"><a href="#ud1.8"> Manejo de Etiquetas en Git.</a></li>
+                        <li class="submenu9"><a href="#ud1.9"> Limpieza de Archivos y Conflictos.</a></li>
+                    </ul>
+                </li>
+                <li class="menuTemas">
+                   <label for="tema2" class="tema-label">Unidad 2</label>
+                    <input type="checkbox" id="tema2" class="tema-checkbox">
+                    <ul class="submenu">
+                        <li class="submenu1"><a href="#ud2.1">¿Qué son las ramas(Branch)?.</a></li>
+                        <li class="submenu2"><a href="#ud2.2">Creación y Gestión de Ramas.</a></li>
+                        <li class="submenu3"><a href="#ud2.3"> Historial de Commits.</a></li>
+                        <li class="submenu4"><a href="#ud2.4"> Cambio entre Ramas.</a></li>
+                        <li class="submenu5"><a href="#ud2.5"> Comparación y Resolución de Conflictos.</a></li>
+                        <li class="submenu6"><a href="#ud2.6"> Fusión de Ramas.</a></li>
+                    </ul>
+                </li>
+                <li class="menuTemas">
+                   <label for="tema3" class="tema-label">Unidad 3</label>
+                    <input type="checkbox" id="tema3" class="tema-checkbox">
+                    <ul class="submenu">
+                        <li class="submenu1"><a href="#ud3.1"> Clonación de repositorios.</a></li>
+                        <li class="submenu5"><a href="#ud3.2"> Actualización de repositorios locales.</a></li>
+                        <li class="submenu6"><a href="#ud3.3"> Recuperación de cambios remotos.</a></li>
+                        <li class="submenu7"><a href="#ud3.4">Flujos de trabajo con GIT.</a></li>
+                        <li class="submenu8"><a href="#ud3.5"> Añadir colaboradores en GitHub.</a></li>
+                    </ul>
+                </li>
+            </menu>
+        </aside>
+     
+        <!-- Contenido principal -->
+        <main>
+            <!-- Unidad1 -->
+            <article id ="tema1">
+                <header>
+                    <h1>Unidad 1. Introducción a Git y Comandos Básicos.</h1>
+                </header>
+                <fieldset class="fieldsetRecursos">
+                  <legend><b>¿Qué recursos he utilizado?.</b></legend>
+                  <p>Para aprender mejor Git he tenido que utilizar ciertos recursos. Estos son los recursos que he utilizado:</p>
+                  <p>Esto es una serie de videos de YouTube que te explica desde cero a cómo utilizar Git.
+                    Enlace aquí. <br/><a href="https://youtube.com/playlist?list=PLU8oAlHdN5BlyaPFiNQcV0xDqy0eR35aU&si=yUARt9L9McZ8mOrk">Enlace aquí.</a></p>
+                  <p>También los PDF que ha pasado el profesor por Classroom me han sido de ayuda.</p>
+                </fieldset><br/>
+                <fieldset class="fieldsetproblemas">
+                    <legend><b>¿Qué problemas he encontrado?.</b></legend>
+                    <ul>
+                        <li>
+                            Los problemas más frecuentes que he enfrentado son que escribí mal los comandos,
+                             lo que causaba un error porque no reconocía la palabra.
+                        </li><br/>
+                        <li>
+                            Traté de realizar un commit para validar las dos versiones de la resolución de los conflictos del trabajo de clase. 
+                            Sin embargo, como no tenía registrado mi nombre de usuario ni contraseña, no pude llevarlo a cabo. 
+                            Tuve que registrarme para completar el proceso.
+                        </li><br/>
+                        <li>
+                            Tuve un error al intentar hacer un pull porque no podía encontrar el repositorio remoto. 
+                            Resulta que había escrito mal el nombre del repositorio.</li><br/>
+                        <li>
+                            También me ocurrió lo mismo de nuevo, pero esta vez era que no había añadido la referencia del repositorio.
+                        </li><br/>
+                         <li>
+                            He cometido errores al fusionar ramas; he terminado fusionando las ramas que no eran.
+                        </li>
+                    </ul>
+
+                </fieldset>
+                <section id="ud1.1">
+                    <h2>1. Introducción.</h2>
+                    <p> Git es una herramienta de control de versiones que facilita la administración de modificaciones en proyectos de software. 
+                        Es clave para el trabajo en equipo, el seguimiento de versiones y la conservación del registro de cambios en el código.
+                    </p>
+                </section>
+                <section id="ud1.2">
+                    <h2>2. Configuración Inicial de Git.</h2>
+                    <p>Configuración básica para usar Git.</p>
+                    <ul>
+                        <li><code class="colorazul"> config --global user.name "Tu Nombre"</code>: Este comando establece el nombre de usuario que se asociará a los commits.</li>
+                        <li><code class="colorazul">Git config --global user.email "tuemail@ejemplo.com"</code>: Con este comando, asignas tu correo electrónico al usuario para que se registre en los cambios.</li>
+                        <li><code class="colorazul">Git config --global core.editor "nombre_editor"</code>: Este comando define el editor de texto predeterminado que usarás en Git (es opcional).</li>
+                    </ul>
+                    <p>
+                        Estos comandos establecen tu nombre y correo electrónico en Git. 
+                        Cada vez que hagas un commit, se asociará con esta información, 
+                        lo cual es esencial para mantener un registro claro en el historial de cambios.
+                    </p>
+                </section>
+                <section id="ud1.3">
+                    <h2>3. Comandos Básicos de Git.</h2>
+                    <p>Comandos esenciales para comenzar a trabajar con Git.</p>
+                    <ul>
+                        <li><code class="colorazul">Git init</code>: Crea un nuevo repositorio local en la carpeta actual.</li>
+                        <li><code class="colorazul">Git status</code>: Muestra el estado del repositorio, incluyendo archivos modificados, listos para commit o sin seguimiento.</li>
+                        <li><code class="colorazul">Git add [archivo/patrón]</code>: Añade un archivo o conjunto de archivos al área de staging, preparándolos para el commit.</li>
+                        <li><code class="colorazul">Git add .</code> : Añade todos los archivos modificados al área de staging.</li>
+                        <li><code class="colorazul">Git commit -m 'mensaje'</code>: Guarda los cambios en el repositorio local con un mensaje que describe lo que se hizo.</li>
+                        <li><code class="colorazul">Git commit --amend -m 'Nuevo mensaje'</code>: Permite cambiar el mensaje del último commit y hacer pequeños ajustes en él.</li>
+                        <li><code class="colorazul">Git log</code>: Muestra el historial completo de todos los commits con detalles.</li>
+                        <li><code class="colorazul">Git log --oneline</code>: Muestra el historial de commits de forma resumida, con un commit por línea.</li>
+                    </ul>
+                    <p>
+                        Estos comandos te permiten crear y administrar un repositorio de Git. 
+                        El proceso básico consiste en añadir archivos, 
+                        confirmar los cambios con un commit y consultar el historial de versiones.
+                    </p>
+                </section>
+                <section id="ud1.4">
+                    <h2>4. Comandos para Comparar y Revisar Cambios</h2>
+                    <p>Herramientas para comparar versiones y ver las diferencias entre archivos o commits.</p>
+                    <ul>
+                        <li><code class="colorazul">Git diff</code>: Muestra las diferencias entre el contenido actual y los cambios que aún no has confirmado.</li>
+                        <li><code class="colorazul">Git diff "commit1" "commit2"</code>: Compara dos commits específicos y muestra las diferencias entre ellos.</li>
+                    </ul>
+                    <p>
+                        Comparar archivos es fundamental para entender qué modificaciones se han realizado en el código antes de confirmarlas o entre versiones específicas.
+                    </p>
+                </section>
+                <section id="ud1.5">
+                    <h2>5. Gestión de Repositorios Remotos.</h2>
+                    <p>¿Cómo gestionar repositorios remotos para actualizar los cambios locales en un servidor?.</p>
+                    <ul>
+                        <li><code class="colorazul">Git remote</code>: Muestra todos los repositorios remotos que has configurado.</li>
+                        <li><code class="colorazul">Git remote add [nombre] [URL]</code>: Agrega un nuevo repositorio remoto utilizando un nombre y una URL específicos.</li>
+                        <li><code class="colorazul">Git remote show [nombre]</code>: Proporciona información detallada sobre un repositorio remoto específico.</li>
+                        <li><code class="colorazul">Git remote rename [old] [new]</code>: Cambia el nombre de una referencia a un repositorio remoto.</li>
+                        <li><code class="colorazul">Git remote rm [nombre]</code>: Elimina la referencia a un repositorio remoto de tu sistema local.</li>
+                    </ul>
+                    <p>
+                        Los repositorios remotos permiten trabajar de manera colaborativa, compartiendo el código a través de la nube o servidores como GitHub. 
+                        Estos comandos hacen más fácil agregar, modificar y eliminar conexiones remotas.
+                    </p>
+                </section>
+                <section id="ud1.6">
+                    <h2>6. Subida de Cambios al Servidor Remoto.</h2>
+                    <p>¿Cómo envía los cambios que has realizado en tu equipo a un servidor remoto.? Los siguientes comandos te lo mostrarán.</p>
+                   
+                    <ul>
+                        <li><code class="colorazul">Git push [servidor_remoto] [rama]</code>: Este comando envía los cambios locales de la rama que especifiques al repositorio remoto.</li>
+                        <li><code class="colorazul">Git push -u [repositorio_remoto] [rama_local]</code>: Con este comando, estableces una conexión de subida (upstream) entre tu rama local y la remota, lo que hace más fácil realizar envíos en el futuro.</li>
+                        <li><code class="colorazul">Git branch -M main</code>: Este comando renombra la rama local "master" a "main", siguiendo la convención que usa GitHub.</li>
+                    </ul>
+                    <p>La sincronización con un servidor remoto permite que otros colaboradores accedan a los cambios que has realizado localmente. El comando "git push" se utiliza para enviar tus commits al servidor remoto.</p>
+                </section>
+                <section id="ud1.7">
+                    <h2>7. Rollback (Reversión de Cambios).</h2>
+                    <p>¿cómo deshacer o revertir cambios en el proyecto?.</p>
+                    <ul>
+                        <li><code class="colorazul">Git reset HEAD [archivo]</code>: Este comando devuelve el archivo al estado de no preparado (unstaged).</li>
+                        <li><code class="colorazul">Git reset --soft HEAD^</code>: Con este comando, se elimina el último commit, pero se conservan los cambios en el área de staging.</li>
+                        <li><code class="colorazul">Git reset --hard [commit]</code>: Este comando elimina todos los cambios y restablece el repositorio a un estado específico de un commit.</li>
+                        <li><code class="colorazul">Git revert [HEAD^ || id_commit]</code>: Crea un nuevo commit que deshace los cambios de un commit anterior, manteniendo así el historial intacto.</li>
+                    </ul>
+                    <P>
+                        Git ofrece diferentes maneras de deshacer cambios de forma segura. 
+                        Aunque <code class="colorazul">Git reset</code> puede eliminar commits o modificaciones, <code class="colorazul">Git revert</code> es la opción más segura para deshacer cambios, ya que lo hace sin perder el historial.
+                    </P>
+                </section>
+                <section id="ud1.8">
+                    <h2>8. Manejo de Etiquetas en Git.</h2>
+                    <p>¿Cuál es el uso de etiquetas para marcar versiones específicas en el historial del proyecto?.</p>
+                    <ul>
+                        <li><code class="colorazul">Git tag</code>: Este comando muestra todas las etiquetas que existen en el repositorio.</li>
+                        <li><code class="colorazul">Git show [nombre_etiqueta]</code>: Con este comando, puedes ver detalles sobre una etiqueta, incluyendo el commit al que está vinculada.</li>
+                        <li><code class="colorazul">Git tag -a [nombre_etiqueta] -m 'Mensaje'</code>: Este comando crea una etiqueta anotada en el commit actual y le añade un mensaje.</li>
+                        <li><code class="colorazul">Git tag -a [id_commit] -m 'Mensaje'</code>: Este comando crea una etiqueta anotada en un commit específico y también le agrega un mensaje.</li>
+                    </ul>
+                    <p>Las etiquetas son útiles para señalar versiones clave del proyecto, como los lanzamientos y permiten tener una referencia rápida.</p>
+                </section>
+                <section id="ud1.9">
+                    <h2>9. Limpieza de Archivos y Conflictos.</h2>
+                    <p>¿Cómo eliminar archivos no deseados o gestionar conflictos en el repositorio?.</p>
+                    <ul>
+                        <li><code class="colorazul">Git clean -n</code>: Este comando muestra una lista de archivos que no están siendo rastreados (untracked) y que se eliminarían.</li>
+                        <li><code class="colorazul">Git clean -f</code>: Con este comando, se eliminan de forma permanente los archivos que no están siendo rastreados por Git.</li>
+                        <li><code class="colorazul">Git checkout [id_commit]</code>: Este comando te permite ver cómo estaba el proyecto en un commit específico, sin afectar el estado actual del proyecto.</li>
+                    </ul>
+                    <p>
+                        Estos comandos te permiten eliminar archivos que no necesitas y revisar versiones anteriores del proyecto sin cambiar el estado actual. 
+                        Limpiar los archivos asegura que el repositorio no contenga archivos temporales o innecesarios.
+                    </p>
+                </section>
+                <footer>
+                    <p>Fin del tema 1.</p>
+                </footer>
+            </article>
+            <!-- Tema 2  -->
+            <article id='tema2'>
+                <header>
+                    <h1> Unidad 2. Creación y Gestión de Ramas.</h1>
+                </header>
+                <section>
+                    <h2 id="ud2.1">1.¿Qué son las ramas(Branch)?.</h2>
+                    <p>
+                        Las ramas en Git son bifurcaciones que permiten desarrollar nuevas 
+                        versiones de un proyecto sin modificar la rama principal, conocida como "master".
+                    </p>
+                    <ul>
+                        <li>
+                            Trabajar con ramas en Git significa hacer cambios (commits) en una rama específica, 
+                            lo que ayuda a mantener el trabajo organizado y evita interferencias entre diferentes desarrollos.
+                        </li>
+                        <li>
+                            Al crear una nueva rama, se copia el estado actual del proyecto 
+                            para seguir trabajando desde allí sin afectar la rama principal.
+                        </li>
+                    </ul>
+                </section>
+                <section id="ud2.2">
+                    <h2>2.Creación y Gestión de Ramas.</h2>
+                    <p>A continuación explicaremos cómo listar, crear, eliminar y renombrar ramas en Git usando comandos.</p>
+                    <ul>
+                        <li><code class="colorverde">Git branch:</code> Muestra todas las ramas existentes y resalta la rama activa.</li>
+                        <li><code class="colorverde">Git branch [nombre_nueva_rama]</code>: Genera una nueva rama a partir de la actual.</li>
+                        <li><code class="colorverde">Git branch -d [nombre_nueva_rama]</code>: Borra la rama especificada, siempre que no tenga cambios no fusionados.</li>
+                        <li><code class="colorverde">Git branch -m [old_nombre_rama] [new_nombre_rama]</code>: Cambia el nombre de una rama existente.</li>
+                        <li><code class="colorverde">Git show</code>: Muestra información sobre el último commit y la rama asociada.</li>
+                    </ul>
+                    <p>
+                        La gestión de ramas es importante para organizar un proyecto.
+                        Los errores más comunes pueden ser eliminar ramas con cambios no fusionados o cometer errores al renombrarlas.
+                         Por eso, es importante seguir un procedimiento claro y revisar el estado de las ramas antes de hacer cambios.
+                    </p>
+                </section>
+                <section id="ud2.3">
+                    <h2>3. Historial de Commits.</h2>
+                    <p>¿Cómo ver el historial de cambios en el repositorio a través de la línea de comandos?.</p>
+                    <ul>
+                        <li><code class="colorverde">Git log</code>: Muestra una lista de los IDs de los commits con detalles.</li>
+                        <li><code class="colorverde">Git log -p</code>: Incluye cambios específicos por archivo en cada commit.</li>
+                        <li><code class="colorverde">Git log --oneline</code>: Muestra el historial en una línea por commit.</li>
+                        <li><code class="colorverde">Git log --oneline --all</code>: Muestra los commits de todas las ramas de forma compacta.</li>
+                    </ul>
+                    <p>
+                        Consultar el historial de commits es fundamental para entender los cambios en un proyecto.
+                        Con comandos como Git log podemos ver detalles de cada modificación.
+                        Un error común es no revisar este historial antes de hacer cambios importantes, 
+                        no revisar todo el historial puede hacer que se pasen por alto commits relevantes, 
+                        haciendo mas difícil detectar errores.
+                    </p>
+                </section>
+                <section id="ud2.4">
+                    <h2>4. Cambio entre Ramas.</h2>
+                    <p>
+                         Vamos a explica cómo cambiar entre ramas, 
+                         crear una rama nueva en un solo paso 
+                        y regresar a una versión anterior del proyecto.
+                    </p>
+                    <ul>
+                        <li><code class="colorverde">Git checkout [nombre_rama]</code>: Cambia a la rama indicada.</li>
+                        <li><code class="colorverde">Git checkout -b [nombre_nueva_rama]</code>:Crea y cambia a una nueva rama simultáneamente.</li>
+                        <li><code class="colorverde">Git checkout [ID_commit]</code>: Permite volver a una versión anterior del proyecto especificando el ID del commit.</li>
+                    </ul>
+                    <p>
+                        Manejar ramas en Git es esencial para el flujo de trabajo en Git. 
+                        Es importante guardar los cambios antes de cambiar de rama para evitar pérdidas de trabajo. 
+                        Regresar a un commit anterior puede ser confuso si no se entiende el contexto, lo que puede generar errores. 
+                        Por lo tanto, siempre asegúrate de guardar y comprender tus cambios antes de cambiar de rama.
+                    </p>
+                </section>
+                <section id="ud2.5">
+                    <h2>5. Comparación y Resolución de Conflictos.</h2>
+                    <p>Veremos cómo visualizar diferencias y detectar conflictos entre ramas, lo cual es útil antes de realizar una fusión.</p>
+                    <ul>
+                        <li><code class="colorverde">Git diff</code>: Muestra diferencias entre el trabajo actual y los cambios pendientes.</li>
+                        <li><code class="colorverde">Git diff [branch_origen] [branch_destino]</code>: Compara dos ramas y muestra los posibles conflictos antes de fusionarlas.</li>
+                    </ul>
+                    <p>
+                        La visualización de diferencias nos permite entender qué cambios se han realizado y cómo pueden afectar el proyecto. 
+                        Un error común es no realizar esta comparación antes de intentar fusionar, 
+                        lo que puede provocar conflictos que dificultan el progreso del proyecto.
+                    </p>
+                </section>
+                <section id="ud2.6">
+                    <h2>6. Fusión de Ramas.</h2>
+                    <p> Comandos para fusionar ramas y cómo manejar conflictos que puedan surgir durante este proceso.</p>
+                    <ul>
+                        <li><code class="colorverde">Git merge [nombre_rama]</code>: Se utiliza para fusionar los cambios de una rama específica en la rama en la que te encuentras actualmente. .</li>
+                        <li><code class="colorverde">Git merge --abort</code>: Permite revertir a la situación anterior si surgen problemas durante la fusión.</li>
+                        <li><code class="colorverde">Git log --merge</code>: Muestra información sobre los commits que causaron conflictos durante una fusión, útil para resolverlos.</li>
+                    </ul>
+                    <p>
+                        La fusión de ramas es un proceso que permite combinar cambios de diferentes líneas de desarrollo.
+                        Este proceso puede ser complicado si los conflictos que surgen no se manejan adecuadamente.
+                        Un error frecuente es no estar preparado para resolver conflictos, 
+                        lo que puede llevar a que se implemente código que no funcione correctamente.
+                    </p>
+                </section>
+                <footer id="footer2">
+                    <p>Fin del tema 2.</p>
+                </footer>
+            </article>
+            <!-- tema 3 -->
+            <article>
+                <header>
+                    <h1>Unidad 3. Empezando a funcionar.</h1>
+                </header>
+                
+                <section id="ud3.1">
+                    <h2>1. Clonación de repositorios.</h2>
+                    <p>Para comenzar a trabajar con un proyecto en GIT, primero debemos clonar el repositorio remoto a nuestro equipo local.</p>
+                    <ul>
+                        <li><code class="colorrosa">Git clone [remote_repo] [directory_local]</code>: Clona un repositorio remoto en un directorio local.</li>
+                        <li><code  class="colorrosa">Git clone --branch [tag] [remote_repo]</code>: Clona una versión específica del repositorio.</li>
+                        <li><code  class="colorrosa">Git clone --branch --single-branch [branch_name] [remote_repo]</code>: Clona únicamente una rama específica del repositorio.</li>
+                    </ul>
+                    <p>Clonar el repositorio te permite trabajar en tu propio entorno de desarrollo sin alterar el repositorio original. Esto es crucial para colaborar en proyectos de software de manera eficiente.</p>
+                    <p>Sus errores comunes pueden ser no especificar correctamente la URL del repositorio o clonar todo el repositorio cuando solo se necesita una rama específica.</p>
+                </section>
+        
+                <section id="ud3.2">
+                    <h2>2. Actualización de repositorios locales.</h2>
+                    <p>Después de trabajar en local, es importante mantener sincronizados los cambios con el repositorio remoto.</p>
+                    <ul>
+                        <li><code  class="colorrosa">Git pull [servidor_remoto]</code>: Fusiona los cambios del remoto al local (fetch + merge).</li>
+                        <li><code  class="colorrosa">Git pull [servidor_remoto] [rama]</code>: Descarga una rama específica del servidor remoto.</li>
+                        <li><code  class="colorrosa">Git pull --verbose [servidor_remoto]</code>: Muestra un proceso detallado de la fusión.</li>
+                        <li><code  class="colorrosa">Git pull --rebase [servidor_remoto]</code>: Reordena los cambios locales sobre los remotos.</li>
+                    </ul>
+                    <p>El uso del comando <code  class="colorrosa">git pull</code> asegura que tu trabajo local esté actualizado con los cambios más recientes del repositorio remoto, evitando que trabajes con una versión desactualizada.</p>
+                    <p>Un error que he tenido fue que olvidé hacer pull antes de realizar cambios locales.</p>
+                </section>
+        
+                <section id="ud3.3">
+                    <h2>3. Recuperación de cambios remotos.</h2>
+                    <p>Si deseas ver los cambios remotos sin fusionarlos inmediatamente, puedes utilizar los siguientes comandos:</p>
+                    <ul>
+                        <li><code  class="colorrosa">Git fetch [nombre_servidor_remoto]</code>: Descarga los cambios del remoto sin fusionarlos.</li>
+                        <li><code  class="colorrosa">Git checkout fetch_HEAD</code>: Cambia a la rama que contiene los cambios descargados.</li>
+                        <li><code  class="colorrosa">Git checkout -b [new_Branch]</code>: Crea una nueva rama basada en los cambios descargados del remoto.</li>
+                        <li><code  class="colorrosa">Git diff [rama_local] [rama_remota_cambios]</code>: Compara diferencias entre una rama local y una remota.</li>
+                        <li><code  class="colorrosa">Git merge [rama]</code>: Fusiona los cambios de una rama con la actual.</li>
+                    </ul>
+                    <p>Utilizar git fetch te permite revisar los cambios disponibles en el repositorio remoto antes de decidir si los fusionas o los rebasas. Esto es útil para evitar sorpresas en tu código local.</p>
+                    <p>Los errores comunes incluyen olvidar realizar fetch regularmente, lo que lleva a trabajar con ramas desactualizadas, o confundir fetch con pull, que sí fusiona los cambios.</p>
+                </section>
+        
+                <section id="ud3.4">
+                    <h2>4.Flujos de trabajo con GIT.</h2>
+                    <p>
+                        Los flujos de trabajo en Git organizan la forma en que los equipos colaboran, 
+                        utilizando ramas, pull requests, y estrategias como merge o rebase para gestionar los cambios. 
+                        Dependiendo del proyecto, puedes optar por diferentes estrategias para mantener un desarrollo fluido y eficiente.
+                    </p>
+                </section>
+        
+                <section id="ud3.5">
+                    <h2>5. Añadir colaboradores en GitHub.</h2>
+                    <p>En GitHub, puedes añadir colaboradores a tu repositorio para que puedan contribuir al código. Es importante gestionar adecuadamente los permisos de los colaboradores para garantizar la seguridad del repositorio.</p>
+                    <p>Errores comunes incluyen no configurar correctamente los permisos, lo que puede permitir accesos no deseados o limitar a los colaboradores en su capacidad de contribuir.</p>
+                </section>
+        
+                <footer>
+                    <p>Fin del Tema 3</p>
+                </footer>
+            </article>
+            </div>
+        </main>
+</body>
+</html>
